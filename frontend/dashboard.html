@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Dashboard</h2>
+    <form id="fileUploadForm" enctype="multipart/form-data">
+      <input type="file" id="fileInput" name="learningMaterial" required>
+      <button type="submit">Upload Learning Material</button>
+    </form>
+    <p id="uploadMessage"></p>
+  </div>
+
+  <script>
+    // Handle file upload
+    document.getElementById('fileUploadForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      
+      const formData = new FormData();
+      formData.append('learningMaterial', document.getElementById('fileInput').files[0]);
+
+      fetch('/api/upload', {
+        method: 'POST',
+        body: formData,
+        headers: {
+          'Authorization': `Bearer ${localStorage.getItem('token')}`,  // Send the token for authentication
+        },
+      })
+      .then(response => response.json())
+      .then(data => {
+        if (data.message) {
+          document.getElementById('uploadMessage').innerText = data.message;
+        }
+      })
+      .catch(error => {
+        document.getElementById('uploadMessage').innerText = 'File upload failed';
+        console.error('Error:', error);
+      });
+    });
+  </script>
+</body>
+</html>

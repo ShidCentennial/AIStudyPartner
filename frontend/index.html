@@ -28,6 +28,16 @@
         <p>Don't have an account? <a href="javascript:void(0);" onclick="showRegisterForm()">Register here</a></p>
       </form>
     </div>
+
+    <!-- Dashboard Section for File Upload -->
+    <div class="form-container" id="dashboard" style="display:none;">
+      <h2>Dashboard</h2>
+      <form id="fileUploadForm" enctype="multipart/form-data">
+        <input type="file" id="fileInput" name="file" required>
+        <button type="submit">Upload File</button>
+      </form>
+      <div id="uploadStatus"></div>
+    </div>
   </div>
 
   <script src="script.js"></script>
