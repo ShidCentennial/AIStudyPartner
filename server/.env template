@@ -1,0 +1,3 @@
+MONGO_URI=mongodb://localhost:27017/name-of-db-here
+JWT_SECRET=create a random jwt and put it here
+PORT=5000
