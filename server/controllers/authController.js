@@ -1,4 +1,3 @@
-// server/controllers/authController.js
 import User from '../models/User.js';
 import jwt from 'jsonwebtoken';
 import bcrypt from 'bcryptjs';
@@ -51,7 +50,7 @@ export const loginUser = async (req, res) => {
   
       res.json({ token, user: { _id: user._id, name: user.name, email: user.email } });
     } catch (err) {
-      console.error("Login error:", err); // Log the actual error
+      console.error("Login error:", err); 
       res.status(500).json({ error: "Server error" });
     }
   };

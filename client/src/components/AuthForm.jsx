@@ -22,7 +22,6 @@ const AuthForm = ({ type }) => {
       const endpoint = type === "register" ? "/auth/register" : "/auth/login";
       const { data } = await api.post(endpoint, formData);
       
-      // Save token and redirect
       localStorage.setItem("token", data.token);
       navigate("/profile");
     } catch (err) {

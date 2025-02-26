@@ -1,4 +1,3 @@
-// server/server.js
 import express from 'express';
 import dotenv from 'dotenv';
 import connectDB from './config/db.js';
@@ -10,7 +9,6 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Routes
 app.use('/api/auth', authRoutes);
 
 
