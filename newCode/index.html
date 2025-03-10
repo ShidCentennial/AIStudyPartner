@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz App  </title>
+  <style>
+    /* General styling */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #8360c3, #2ebf91);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 500px;
+      padding: 20px;
+    }
+
+    .quiz-box {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .quiz-box:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Title styling */
+    .title {
+      font-size: 28px;
+      font-weight: bold;
+      color: #2ebf91;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* Question styling */
+    .question {
+      font-size: 20px;
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 15px;
+    }
+
+    /* Option buttons */
+    .options .option {
+      background-color: #f4f4f4;
+      color: #333;
+      padding: 12px 16px;
+      margin-bottom: 10px;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .options .option:hover {
+      background-color: #e0e0e0;
+      border-color: #8360c3;
+    }
+
+    .options .option:active {
+      background-color: #d1c4e9;
+    }
+
+    /* Feedback styling */
+    .feedback {
+      margin-top: 15px;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    /* Score styling */
+    .score {
+      margin-top: 20px;
+      font-size: 22px;
+      font-weight: bold;
+      color: #2ebf91;
+      text-align: center;
+    }
+
+    /* Responsive design */
+    @media (max-width: 600px) {
+      .quiz-box {
+        padding: 20px;
+      }
+
+      .title {
+        font-size: 24px;
+      }
+
+      .question {
+        font-size: 18px;
+      }
+
+      .options .option {
+        font-size: 14px;
+        padding: 10px;
+      }
+
+      .feedback {
+        font-size: 16px;
+      }
+
+      .score {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <div class="quiz-box">
+    <h1 class="title">🚀 Quiz Challenge</h1>
+    <div id="question" class="question"></div>
+    <div id="options" class="options"></div>
+    <div id="feedback" class="feedback"></div>
+    <div id="score" class="score"></div>
+  </div>
+</div>
+
+<script src="quiz.js"></script>
+
+</body>
+</html>
