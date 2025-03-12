@@ -7,7 +7,6 @@ const router = express.Router();
 router.post('/register', registerUser);
 router.post('/login', loginUser);
 
-//Protected Route
 router.get('/profile', protect, (req, res) => {
   res.json(req.user);
 });
