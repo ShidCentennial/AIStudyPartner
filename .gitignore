@@ -1,0 +1,13 @@
+# StudyPartner/.gitignore
+
+# Ignore server/.env
+/server/.env
+
+# Ignore client/.env
+/client/.env
+
+# Optional: Ignore node_modules everywhere
+**/node_modules/
+
+# Optional: System files
+.DS_Store

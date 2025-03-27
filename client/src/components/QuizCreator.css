@@ -1,0 +1,285 @@
+/* Quiz Creator Styles */
+.quiz-creator {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-family: 'Arial', sans-serif;
+  text-align: center; /* Center-align all content by default */
+}
+
+.quiz-creator h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--light-text);
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 12px 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  border-left: 4px solid #f5c6cb;
+}
+
+/* Form Styles */
+.form-group {
+  margin-bottom: 25px;
+  text-align: left; /* Keep form fields left-aligned for better readability */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: var(--light-text);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid var(--light-border);
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.2s ease;
+  background-color: var(--light-bg);
+  color: var(--light-text);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--light-accent);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(var(--light-accent-rgb), 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Upload Method Selector */
+.upload-method-selector {
+  margin-bottom: 25px;
+  border: 1px solid var(--light-border);
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+}
+
+.method-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--light-border);
+}
+
+.method-tabs button {
+  flex: 1;
+  padding: 15px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: var(--light-text-secondary);
+  transition: all 0.2s ease;
+}
+
+.method-tabs button:hover {
+  background-color: var(--light-bg-darker);
+}
+
+.method-tabs button.active {
+  background-color: rgba(var(--light-accent-rgb), 0.1);
+  color: var(--light-accent);
+  font-weight: bold;
+  border-bottom: 3px solid var(--light-accent);
+}
+
+/* File Upload Styles */
+.file-upload {
+  padding: 20px;
+  text-align: center;
+}
+
+.file-upload input[type="file"] {
+  display: block;
+  margin: 15px 0;
+  padding: 10px;
+  border: 2px dashed var(--light-border);
+  border-radius: 5px;
+  width: 100%;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+  text-align: center;
+}
+
+.file-upload input[type="file"]:hover {
+  border-color: var(--light-accent);
+}
+
+.file-info {
+  background-color: rgba(var(--light-accent-rgb), 0.1);
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.file-info p {
+  margin: 5px 0;
+  color: var(--light-text-secondary);
+  text-align: center;
+}
+
+.file-help {
+  font-size: 14px;
+  color: var(--light-text-secondary);
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.cancel-button,
+.create-button {
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s ease;
+}
+
+.cancel-button {
+  background-color: var(--light-bg-darker);
+  color: var(--light-text-secondary);
+}
+
+.cancel-button:hover {
+  background-color: var(--light-border);
+}
+
+.create-button {
+  background-color: var(--light-accent);
+  color: #ffffff;
+  min-width: 150px;
+}
+
+.create-button:hover:not(:disabled) {
+  background-color: var(--light-accent-hover);
+}
+
+.create-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .quiz-creator {
+    padding: 20px;
+  }
+  
+  .form-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .cancel-button,
+  .create-button {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/* Dark Mode Styles */
+@media (prefers-color-scheme: dark) {
+  .quiz-creator h1 {
+    color: var(--dark-text);
+  }
+  
+  .form-group label {
+    color: var(--dark-text);
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    background-color: var(--dark-bg-lighter);
+    color: var(--dark-text);
+    border-color: var(--dark-border);
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--dark-accent);
+    box-shadow: 0 0 0 3px rgba(var(--dark-accent-rgb), 0.2);
+  }
+  
+  .upload-method-selector {
+    border-color: var(--dark-border);
+  }
+  
+  .method-tabs {
+    border-bottom-color: var(--dark-border);
+  }
+  
+  .method-tabs button {
+    color: var(--dark-text-secondary);
+  }
+  
+  .method-tabs button:hover {
+    background-color: var(--dark-bg-lighter);
+  }
+  
+  .method-tabs button.active {
+    background-color: rgba(var(--dark-accent-rgb), 0.2);
+    color: var(--dark-accent);
+    border-bottom-color: var(--dark-accent);
+  }
+  
+  .file-upload input[type="file"] {
+    border-color: var(--dark-border);
+  }
+  
+  .file-upload input[type="file"]:hover {
+    border-color: var(--dark-accent);
+  }
+  
+  .file-info {
+    background-color: rgba(var(--dark-accent-rgb), 0.1);
+  }
+  
+  .file-info p,
+  .file-help {
+    color: var(--dark-text-secondary);
+  }
+  
+  .cancel-button {
+    background-color: var(--dark-bg-lighter);
+    color: var(--dark-text-secondary);
+  }
+  
+  .cancel-button:hover {
+    background-color: var(--dark-border);
+  }
+  
+  .create-button {
+    background-color: var(--dark-accent);
+  }
+  
+  .create-button:hover:not(:disabled) {
+    background-color: var(--dark-accent-hover);
+  }
+  
+  .error-message {
+    background-color: rgba(220, 53, 69, 0.2);
+    color: #f8d7da;
+    border-left-color: #dc3545;
+  }
+}
